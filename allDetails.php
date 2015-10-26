@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php session_start();if(isset($_SESSION['info'])){ ?>
+
 <html ><!--<![endif]--><head>
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -14,27 +14,6 @@
  * @author tribhuvan
  *        
  */	
-		include_once('database/Insert.php');
-		include_once('database/Select.php');		
-		$getAlpha = new Select;
-		$companydetails = array();
-    
-        $companydetails = $getAlpha->selectAccountDetails($_GET['comid']);
-		$selectAccountDetailsByCsuite = $getAlpha->selectAccountDetailsByCsuite($_GET['comid']);
-		
-		/*$companydetails = $getAlpha->selectWhere('companydetails','comid',$_GET['comid']);
-		$ryc = $getAlpha->selectWhere('range_of_years_of_contract','comid',$_GET['comid']);
-		$cio_cpo = $getAlpha->selectWhere('cio_cpo','comid',$_GET['comid']);
-		$contract_renewal_data = $getAlpha->selectWhere('contract_renewal_data','comid',$_GET['comid']);
-		$data_center = $getAlpha->selectWhere('data_center','comid',$_GET['comid']);
-		$metrics = $getAlpha->selectWhere('metrics','comid',$_GET['comid']);
-		$rankings_history = $getAlpha->selectWhere('rankings_history','comid',$_GET['comid']);
-		$sbu_revenue_of_cg = $getAlpha->selectWhere('sbu_revenue_of_cg','comid',$_GET['comid']);
-		$recievables_and_payables = $getAlpha->selectWhere('recievables_and_payables','comid',$_GET['comid']);
-		$capgemini_positioning = $getAlpha->selectWhere('capgemini_positioning','comid',$_GET['comid']);
-		$cost_saving_business_growth_mna = $getAlpha->selectWhere('cost_saving_business_growth_mna','comid',$_GET['comid']);
-	//	$companydetailsyear=$getAlpha->selectLike('companydetails', 'account_name', $companydetails[0]['account_name']);*/
-//print_r($companydetails);
 		?>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <style type="text/css">
@@ -117,7 +96,7 @@
 </style>
 <link rel="stylesheet"  href="css/screen.css" type="text/css" media="all">
 <link rel="stylesheet"  href="css/style.css" type="text/css" media="all">
-<?php include 'externalLinks.php'; ?>
+<?php //include 'externalLinks.php'; ?>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 <script type="text/javascript">
@@ -149,97 +128,11 @@ $(document).ready(function () {
     });
 });
 </script>
-    <style>
-.label {
-         z-index: 1 !important;
-     }
 
-    .highcharts-tooltip span {
-       
-        background-color:white;
-        border:1px solid green;
-        opacity:1;
-        z-index:9999 !important;
-       padding:5px;margin:0px;
-    }
 
-    .tooltip {
-        padding:0px;
-    }
-</style>
- <script src="js/highcharts.js"></script>
-                  <script src="js/highcharts-more.js"></script>
-                  <script src="js/exporting.js"></script>
-                  <script src="js/black-theme.js"></script>
-                <script>
-                $(function () {
-    $('#container').highcharts({
-
-        chart: {
-            type: 'scatter',
-            zoomType: '',
-			plotBackgroundImage:"images/BG/plus.png",
-        },
-		navigation: {
-	
-      buttonOptions: {
-		   enabled: false,
-         symbolStroke: '#DDDDDD',
-         theme: {
-            fill: '#505053'
-         }
-      }
-   },plotOptions: {
-				series: { 
-                    
-					dataLabels: {
-						enabled: true,
-						useHTML:true,
-						formatter:function(){
-							//console.log(this);
-							return "<div class='labeltext'><span style='text-align:center;font-size:10px;color:#000;'>"+this.point.options.customParam+"</span></div>";
-						}
-					}
-				}
-			},
-			 tooltip: {
-                 borderWidth: 0,
-            backgroundColor: "rgba(255,255,255,0)",
-            borderRadius: 0,
-            shadow: false,
-            useHTML: true,
-            percentageDecimals: 0,
-            backgroundColor: "rgba(255,255,255,1)",
-       style: {
-                padding: 5,margin:0,
-                fontWeight: 'bold'
-            },
-					formatter: function () {
-						return '<div style="color:#000 !important;">Company Name: '+this.point.options.customParam+'<br/><b>CPS: ' + this.x + '</b><br/><b>CAS: ' + this.y + '</b></div>';
-					},
-					useHTML: true
-				},
-credits: {
-          enabled: false
-      },
-            title: {
-                text: 'Quadrant View',
-            
-            },
-    series: [{
-		
-			name: '<?php echo($companydetails[0]['account_name']); ?>',
-            data: [{x:<?php echo($companydetails[0]['CG_in_senario1']); ?>, y:<?php echo($companydetails[0]['CI_in_senario1']); ?>,customParam:'<?php echo($companydetails[0]['account_name']); ?>'}]
-        }]
-    });
-});
-                
-                </script>
 </head>
 <body>
-<?php include 'header.php'; ?>
-
-
+    
 <main id="main" style="height: 586px;">
   <section id="content">
     <article class="object">
@@ -256,7 +149,7 @@ credits: {
                 <td valign="middle" width="35%" style="padding-left:25px;"><div class="inner">
                     <dl class="object-options">
                       <dt>Account Name:</dt>
-                      <dd><?php echo($companydetails[0]['account_name']); ?></dd>
+                      <dd><?php //echo($companydetails[0]['account_name']); ?></dd>
                       <dt>Account's Parent Name:</dt>
                       <dd><?php echo($companydetails[0]['parent_name']); ?></dd>
                       <dt>Account's HQ:</dt>
@@ -1184,11 +1077,3 @@ credits: {
   </section>
 <?php include 'footer.php'; ?>
 </main>
-
-
-<!-- super cache --></body></html>
-<?php }else{ 
-$newURL="login.php";
-header('Location: '.$newURL);
-}
-?>
