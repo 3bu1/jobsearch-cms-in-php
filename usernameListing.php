@@ -24,9 +24,11 @@ include('database/Insert.php');
 <th>currentTime</th>
 <th>profilePicture</th>
 <th>fullAddress</th>
+<th>city</th>
 <th>phoneNumber</th>
 <th>personalWebsite</th>
 <th>languages</th>
+<th>insearchofjob</th>
 <th>experianceid</th>
 <th>galleryid</th>
 <th>skillid</th>
@@ -50,9 +52,11 @@ include('database/Insert.php');
 <td><?php echo $projects[$i]['currentTime'] ?></td>
 <td><?php echo $projects[$i]['profilePicture'] ?></td>
 <td><?php echo $projects[$i]['fullAddress'] ?></td>
+<td><?php echo $projects[$i]['city'] ?></td>
 <td><?php echo $projects[$i]['phoneNumber'] ?></td>
 <td><?php echo $projects[$i]['personalWebsite'] ?></td>
 <td><?php echo $projects[$i]['languages'] ?></td>
+<td><?php echo $projects[$i]['insearchofjob'] ?></td>
 <td><?php echo $projects[$i]['experianceid'] ?></td>
 <td><?php echo $projects[$i]['galleryid'] ?></td>
 <td><?php echo $projects[$i]['skillid'] ?></td>

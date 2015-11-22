@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
 
 
 	
-		$valuearry = array(htmlspecialchars($_POST['usernameid']),htmlspecialchars($_POST['id']),htmlspecialchars($_POST['fullName']),htmlspecialchars($_POST['email']),htmlspecialchars($_POST['dob']),htmlspecialchars($_POST['password']),htmlspecialchars($_POST['currentTime']),htmlspecialchars($_POST['profilePicture']),htmlspecialchars($_POST['fullAddress']),htmlspecialchars($_POST['phoneNumber']),htmlspecialchars($_POST['personalWebsite']),htmlspecialchars($_POST['languages']),htmlspecialchars($_POST['experianceid']),htmlspecialchars($_POST['galleryid']),htmlspecialchars($_POST['skillid']));
+		$valuearry = array(htmlspecialchars($_POST['usernameid']),htmlspecialchars($_POST['id']),htmlspecialchars($_POST['fullName']),htmlspecialchars($_POST['email']),htmlspecialchars($_POST['dob']),htmlspecialchars($_POST['password']),htmlspecialchars($_POST['currentTime']),htmlspecialchars($_POST['profilePicture']),htmlspecialchars($_POST['fullAddress']),htmlspecialchars($_POST['city']),htmlspecialchars($_POST['phoneNumber']),htmlspecialchars($_POST['personalWebsite']),htmlspecialchars($_POST['languages']),htmlspecialchars($_POST['insearchofjob']),htmlspecialchars($_POST['experianceid']),htmlspecialchars($_POST['galleryid']),htmlspecialchars($_POST['skillid']));
 
         $updateobj = new update;
             
@@ -153,6 +153,19 @@ if(isset($_POST['submit'])){
   
     <div class='form-group'>
 
+    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='city'>city:</label>
+
+    <div class='col-sm-10 col-md-5'>
+
+      <input type='text' class='form-control' id='city' placeholder='city' value='<?php echo $individualDetails[0]['city'] ?>'>
+
+    </div>
+
+  </div>
+
+  
+    <div class='form-group'>
+
     <label class='control-label col-sm-2 col-md-3 text-capitalize' for='phoneNumber'>phoneNumber:</label>
 
     <div class='col-sm-10 col-md-5'>
@@ -184,6 +197,19 @@ if(isset($_POST['submit'])){
     <div class='col-sm-10 col-md-5'>
 
       <input type='text' class='form-control' id='languages' placeholder='languages' value='<?php echo $individualDetails[0]['languages'] ?>'>
+
+    </div>
+
+  </div>
+
+  
+    <div class='form-group'>
+
+    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='insearchofjob'>insearchofjob:</label>
+
+    <div class='col-sm-10 col-md-5'>
+
+      <input type='text' class='form-control' id='insearchofjob' placeholder='insearchofjob' value='<?php echo $individualDetails[0]['insearchofjob'] ?>'>
 
     </div>
 
@@ -260,9 +286,11 @@ password=$('#password').val();
 currentTime=$('#currentTime').val();
 profilePicture=$('#profilePicture').val();
 fullAddress=$('#fullAddress').val();
+city=$('#city').val();
 phoneNumber=$('#phoneNumber').val();
 personalWebsite=$('#personalWebsite').val();
 languages=$('#languages').val();
+insearchofjob=$('#insearchofjob').val();
 experianceid=$('#experianceid').val();
 galleryid=$('#galleryid').val();
 skillid=$('#skillid').val();
@@ -278,9 +306,11 @@ password : password,
 currentTime : currentTime,
 profilePicture : profilePicture,
 fullAddress : fullAddress,
+city : city,
 phoneNumber : phoneNumber,
 personalWebsite : personalWebsite,
 languages : languages,
+insearchofjob : insearchofjob,
 experianceid : experianceid,
 galleryid : galleryid,
 skillid : skillid,

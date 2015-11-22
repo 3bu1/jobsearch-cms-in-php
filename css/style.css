@@ -1,46 +1,65 @@
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+.signinForm{border:1px solid #90958f;background:#FFF;padding:30px; height:330px; border-radius: 5px;}
+.noBorderRadius{
+  -webkit-border-radius: inherit !important;
+     -moz-border-radius: inherit !important;
+          border-radius: inherit !important;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+.noBorder{border:inherit !important;}
+.standardBlue{color:#337ab7;}
+.standardBlueBackground{background:#337ab7;color:#FFF;}
+.standardBlueBackground:hover{background:#eceff4;color:#337ab7;}
+.vcenter {
+    
+    vertical-align: middle;
 }
-body {
-	line-height: 1;
+.noPadding{padding:inherit !important;}
+.noMargin{margin:inherit !important;}
+.height100{height:100%;}
+.contentPanel{height:486px !important;overflow:hidden;width:100%;}
+.contentPanel img{width:100%;
+height:auto;}
+.noBackground{background:inherit !important;}
+footer {
+      background-color: #00488d;
+      color: white;
+      padding: 5px;
+    }
+	.sidenav {
+      background-color: #eceff4;
+   
+    }
+	
+	.headerBackground{  background-color: #eceff4;}
+	.contR {
+  text-transform: uppercase;
+  margin-top: 15px;
+  font-size: 25px;
+  color: #414342;
+  float:none;
+  border-bottom: 5px solid #298bd2;
+  line-height: 35px;
 }
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+.floatNone{float:none;}
+.ML10{margin-left:10px;}
+.ML20{margin-left:20px;}
+.MR20{margin-right:20px;}
+.MT20{margin-top:20px;}
+.MT10{margin-top:10px;}
+.MR10{margin-right:10px;}
+.MB10{margin-bottom:10px;}
+.PB10{padding-bottom:10px;}
+.p10{padding:10px;}
+.navBarLineHeight{line-height:40px;}
+#myModalReg .form-group{margin-bottom: 0px;}
+#myModalReg label{color:#337ab7;}
+@media (max-width: 768px) {
+	.contentPanel{height:auto !important;}
+.mainPanel{height:auto;}
+.navBarLineHeight{line-height:inherit;}
 }
 
-.signinForm{border:1px solid #90958f;background:#FFF;padding:30px; height:330px; border-radius: 5px;}
+@media (max-width: 480px) {
+	.list-group-item a{font-size:15px;color:#414342}
+	.navBarLineHeight{line-height:inherit;}
+}
