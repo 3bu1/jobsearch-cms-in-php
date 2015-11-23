@@ -23,7 +23,20 @@ if ( msieversion() <= 9 )
 	alert("Please open in Chrome, Firefox or Internet Explorer 9 and above to access complete functionality")
      // document.write ( "This is Internet Explorer "+msieversion() );
 </script>
-
+<?php 
+if(isset($_POST['blabkey'])=='blabla'){
+	//echo isset($_POST['registerEmail'])."####";
+include_once('database/Insert.php');
+		include_once('database/Select.php');
+$getAlpha = new Select;
+		$companydetails = array();
+		$companydetails = $getAlpha->selectWhere("username", "email", $_POST['registerEmail']);
+		//print_r($companydetails);
+		//echo json_encode($companydetails);
+		$companydetails = json_encode(array('item' => $companydetails));
+		echo $companydetails;
+}
+?>
 
 <link rel="stylesheet" id="apt-style-css" href="css/style.css" type="text/css" media="all">
   
@@ -570,7 +583,6 @@ id=$('#id').val();
 fullName=$('#fullName').val();
 
 registerEmail = $('#registerEmail').val();
-alert(email);
 dob=$('#dob').val();
 password=$('#password').val();
 currentTime=$('#currentTime').val();
@@ -610,7 +622,26 @@ submit:'submit',
 	,function(data,status){
 		alert('succsessfully Inserted');
 		
-		});  }); });
+		});  }); 
+		
+		$("#registerEmail").change(function(){
+			
+			registerEmail = $('#registerEmail').val();
+			alert(registerEmail);
+			$.post('index.php',
+	{
+		 blabkey : 'blabla',
+registerEmail : registerEmail,
+
+}
+	,function(data,status){
+		
+		var obj = jQuery.parseJSON( data.item);
+		alert(obj.fullName);
+		}); 
+		});
+		
+		});
 
   </script>
             
