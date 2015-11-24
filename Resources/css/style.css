@@ -1,0 +1,304 @@
+.srcPg{
+	 font-family: Roboto,sans-serif;
+}
+.container{
+	width: 950px !important;
+}
+.main{
+  background-color: rgba(35, 48, 63, 0.5)
+}
+
+/* .navbar-nav > li >a{
+	color: #fff;
+} */
+.bgimage{
+	background: url(../images/bgimage.jpg) center 89px repeat-x #f4f4f4;
+	
+}
+.topspace{
+	margin-top: 88px;
+}
+.right-nav, .middle-content{
+	background-color: #fff;
+}
+
+.compName{
+	padding-top: 32px;
+	padding-bottom:10px;
+	color:#09c;
+	font-size: 14px;
+	
+}
+.org{
+	font-size:12px;
+	color:#666;
+	font-weight: 300;
+	padding-bottom: 10px;
+}
+.skill{
+	font-size:13px;
+	color: #4444;
+	line-height: 16px;
+	font-weight: 300;
+	text-align: justify;
+	padding-bottom: 10px;
+	padding-right: 55px !important;
+}
+.space{
+	padding-bottom: 10px;
+	font-size: 12px !important;
+    color: #666 !important;
+}
+.img{
+	padding-top: 32px;
+	
+}
+.posted{
+	text-align: right;
+    
+}
+
+.row .other{
+    background-color: #f9f9f9;
+    border-bottom: 2px solid #f9f9f9;
+    margin-right: 15px;
+    padding: 14px 0px 10px 0px;
+    
+}
+
+.refine {
+   padding: 17px 18px 14px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+}
+.options {
+	border-right-width: 1px;
+	padding-bottom: 19px;
+	font-size: 13px;
+}
+.sdTxt{
+	   
+   /*  padding: 6px 32px 6px 10px; */
+    cursor: pointer;
+    margin-top: 11px;
+    color: #666;
+    width: 110px;
+height: 33px;
+}
+.menu{
+	background-color: #dbdbdb;
+	margin: 13px 43px 24px;
+	padding: 0px;
+	height: 46px;
+    line-height: 38px;
+} 
+
+.butt {
+	padding-bottom: 27px;
+}
+.blueBtn{
+	padding: 0 20px;
+    background-color: #09c;
+    color: #fff;
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+     margin-left: 14px;  
+}
+.side-head{
+	
+    font-size: 14px;
+    font-weight: 400;
+    color: #747474;
+    
+}
+.inlineText {
+	padding-left: 14px;
+	font-size: 11px;
+	color: #666;
+}
+.list{
+	margin-bottom: 7px;
+    height: 48px;
+	line-height: 48px;
+}
+.sdc{
+	    width: 370px;
+    padding-left: 10px;
+    margin-left: -27px;
+    margin-top:3px;
+    border: 0;
+}
+.subButton{
+	background-color: #09c;
+	width: 115px;
+	margin-left: -29px;
+	height: 46px;
+	color: #fff;
+}
+.hyd{
+	height: 40px;
+	margin-top: 3px;
+	border: 0px none;
+	padding-left: 5px;
+}
+._tbg{
+	background-color: #fff;
+}
+.ml{
+	margin-left: -6px;
+}
+.sl{
+	margin-left: 20px;
+}
+.sdTxtSp{
+	margin-top: 3px;height: 40px;
+}
+.mlt{
+	margin-left: -31px;
+}
+.right-nav-sp{
+	padding-left: 32px;
+}
+.freshness{
+	color: #666;font-size: 13px;
+}
+.mt{
+	margin-top: 2px;
+}
+.mb{
+margin-left: 16px;margin-bottom: 15px;	
+}
+.pl{
+	padding-left: 17px;
+}
+.listml{
+	margin-left: -21px;
+}
+.imgml{
+	margin-left: -9px;
+}
+.middlemt{
+	margin-top: 9px;
+}
+.jobsml{
+	margin-left: 9px;
+}
+
+
+/* recriuters.html styling */
+.report{
+	color: #09C;
+    font-size: 13px;
+    float: right;
+}
+.recruitImage{
+	width: 240px;
+    height: 240px;
+    margin-right: 25px;
+}
+.recName{
+	font-size: 17px;
+}
+.srF{
+	font-size: 14px;
+    color: #666;
+    font-weight: 300;
+}
+.follButton{
+	width: 115px;
+	margin-left: -15px;
+	height: 46px;
+  	background: #fff;
+    border: 1px solid #e1e1e1;
+    color: #666;
+    font-size: 14px;
+    display: inline-block;
+    cursor: pointer;
+    outline: 0;
+}
+.followmt button:hover {
+	color:#fff;
+	background-color: #09c;
+}
+.sectors{
+	font-size:14px;
+}
+.textLi{
+	color:#666;
+	font-weight: 300;
+	font-size:12px;
+}
+.textD{
+	color:#7d7979;
+	font-size:14px;
+	font-weight: 300;
+}
+.tabs{
+background-color: #efefef;
+    overflow: hidden;
+}
+.listType li{
+	    border-bottom: 1px solid #F0F0F0;
+	    padding-bottom: 31px;
+}
+.lDvdr{
+	    border-left: 1px solid #E5E5E5;
+	    margin-top: -10px;
+}
+.listType{
+	list-style-type: none;
+}
+.hDvdr{
+	border-top: 1px solid #E5E5E5;
+	margin-top: 15px;
+}
+.share{
+	float: right;
+}
+.compName span a{
+	color:#09c;
+	text-decoration: none;
+}
+.compName a{
+	color:#09c;
+	text-decoration: none;
+
+	}
+.report a{
+	color:#09c;
+	text-decoration: none;
+}
+.bg{
+	background-color: #fff; margin-top: 130px; padding: 16px;
+}
+._bg{
+	background-color: #fff; margin-top: 10px; padding: 16px;
+}
+.detpl{
+	padding-left: 40px;
+}
+.followmt{
+	margin-top: 9px;
+}
+.srFmt{
+	margin-top: 21px;
+}
+.sectormt{
+	margin-top: 50px;
+}
+.skillmt{
+	margin-top: 13px;
+}
+.skillpt{
+	padding-top: 0px;
+}
+.textpt{
+	padding-top: 10px;
+}
+.mobpt{
+	padding-bottom: 16px;
+}
+
