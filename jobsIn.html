@@ -1,14 +1,14 @@
 <!DOCTYPE HTML>
-<html class="srcPg">
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>25 Frames</title>
+<title>25thcraft</title>
 <link rel="stylesheet" type="text/css" href="Resources/css/style.css">
 <link type="text/css" rel="stylesheet"  href="Resources/css/responsive.css" />
-<!-- <link type="text/css" rel="stylesheet"  href="Resources/css/bootstrap-theme.min.css" /> -->
-<!-- <link rel="stylesheet" type="text/css"
-	href="Resources/css/bootstrap.min.css"> -->
+<link type="text/css" rel="stylesheet"  href="Resources/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="Resources/css/bootstrap.min.css">
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -18,6 +18,8 @@
 <style>
 .btn-link{
     color: #666;
+	/* background-color: #fff;
+	border-color: #fff; */
 	font-size: 13px;
 	font-weight: 400;
 	text-decoration: none !important;
@@ -26,6 +28,7 @@
 input[type="checkbox"], input[type="radio"] {
     margin: 10px 2px 1px;
 }
+
 </style>
 
 </head>
@@ -40,7 +43,7 @@ input[type="checkbox"], input[type="radio"] {
 	<!-- start of navigation bar --> 
 	
 	
-	<nav class="navbar navbar-default container navbar-inverse noBorder noMargin noBorderRadius">
+	<nav class="navbar navbar-default container navbar-inverse">
 		<div class="container-fluid">
 		
 		
@@ -81,56 +84,63 @@ input[type="checkbox"], input[type="radio"] {
 
 
 	<!-- search bar -->
-	
-	
-	
-	<div class="row">
 					
 					
 					
-					<div class="col-md-11 col-sm-11 menu">
-					<form>
-						<div class="col-md-5 col-sm-5">
-							<input class="sdc" id="" type="text" value="" placeholder="Skills,Designation,Companies">
-						</div>
-						<div class="col-md-2 col-sm-2 ml">
-							<input class="hyd"  type="text" value="" placeholder="Hyderabad" style="width: 160px;">
-						</div>
-						<div class="col-md-2 col-sm-2 sl">
-							    
-						
-							<div class="options">
-							<select class="sdTxt sdTxtSp" >
-								<option value="experience">Experience</option>
-								<option value="1">1</option>
-								<option value="2" >2</option>
-								<option value="3" >3</option>
-								<option value="4" >4</option>
-							</select>
-						</div>
-						</div>
-						
-						<div class="col-md-2 col-sm-2 mlt">
-							<div class="options">
-							<select class="sdTxt sdTxtSp">
-								<option value="salary">Salary</option>
-								<option value="< 1 Lac"><1 Lac</option>
-								<option value="1" >1</option>
-								<option value="2" >2</option>
-								<option value="3" >3</option>
-							</select>
-						</div>
-						</div>
-						<div class="col-md-1 col-sm-1">
-						   <button type="button" class="subButton">Submit</button>
-						</div>
-						</form>
-					</div>
-				</div>
+					
+				
 		<!-- search bar ends here -->
 		
 				
 		<div class="row">
+		
+		<div class="row mainSearch noMargin noPadding">
+					<form>
+				<div class="col-md-6 noMargin">	
+			<div class="col-sm-7 noMargin noPadding">
+				<input class="form-control col-md-12 noMargin noPadding" id="" type="text" value="" placeholder="Skills,Designation,Companies">
+			</div>
+			<div class="col-sm-5 noMargin noPadding">
+				<input class="form-control col-md-12 noMargin noPadding" type="text" value="" placeholder="Hyderabad">
+			</div>
+			</div>
+			<div class="col-md-6">
+			<div class="col-sm-4">
+				<div class="dropdown">
+					<button class="btn btn-default dropdown-toggle col-md-12" type="button"
+						data-toggle="dropdown">
+						Experience <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="dropdown">
+					<button class="btn btn-default dropdown-toggle col-md-12" type="button"
+						data-toggle="dropdown">
+						Salary <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="#"> < 1</a></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="col-sm-4">
+				<button type="button" class="btn btn-primary btn-md">Submit</button>
+			</div>
+			</div>
+</form>
+		</div>
 		
 		<!-- RIGHT NAVIGATION -->
 		
@@ -161,8 +171,8 @@ input[type="checkbox"], input[type="radio"] {
 					<div class="row refine mt">
 						<div class="accordian side-head">
 							<button type="button" class="btn btn-link"
-								data-toggle="collapse" data-target="#demo">
-								<span class="glyphicon glyphicon-triangle-right"></span>Location
+								data-toggle="collapse" data-target="#demo"  data-spy="scroll" data-offset="50">
+								<span class="glyphicon glyphicon-triangle-right"></span>Location <span class="badge">1200+</span>
 							</button>
 						</div>
 
@@ -190,59 +200,47 @@ input[type="checkbox"], input[type="radio"] {
 						<div class="side-head">
 							<button type="button" class="btn btn-link"
 								data-toggle="collapse" data-target="#comp">
-								<span class="glyphicon glyphicon-triangle-right"></span>Top
-								Companies
+								<span class="glyphicon glyphicon-triangle-right"></span>24 Crafts <span class="badge">120+</span>
+								
 							</button>
 						</div>
 
 						<div id="comp" class="collapse inlineText">
-							<input type="checkbox" name="company" value="ASAP Info Systems">ASAP
-							Info Systems<br> <input type="checkbox" name="company"
-								value="Capgemini">Capgemini <br> <input
-								type="checkbox" name="company" value="Accenture">Accenture<br>
-							<input type="checkbox" name="company" value="Mumbai">Mumbai<br>
-							<input type="checkbox" name="company" value="Novartis Healthcare">Novartis
-							Healthcare<br> <input type="checkbox" name="company"
-								value="Amazon Development Center">Amazon Development
-							Center<br>
+							<input type="checkbox">Direction Department <span class="badge">1200+</span><br>
+							<input type="checkbox">Capgemini <span class="badge">544+</span> <br> 
+							<input type="checkbox">Exibhitor <span class="badge">320+</span><br>
+							<input type="checkbox">Field Publicity <span class="badge">1200+</span><br>
+							<input type="checkbox">Film Distributor <span class="badge">544+</span><br> 
+							<input type="checkbox">Film Processing Lab <span class="badge">320+</span><br>
+							<input type="checkbox">Make Up Department <span class="badge">1200+</span><br>
+							<input type="checkbox">Media Publicity <span class="badge">544+</span><br>
+							<input type="checkbox">Music Department <span class="badge">320+</span><br>
+							<input type="checkbox">OutDoor Unit <span class="badge">1200+</span><br>
+							<input type="checkbox">Processing Lab <span class="badge">544+</span><br>
+							<input type="checkbox">Publicity Designer <span class="badge">320+</span><br>
+							<input type="checkbox">Costume Department <span class="badge">443+</span><br>
+							<input type="checkbox">Producer <span class="badge">1113+</span><br>
+							<input type="checkbox">Sets and Location <span class="badge">1315+</span><br>
+							<input type="checkbox">Sound/Mixing Department <span class="badge">1113+</span><br>
+							<input type="checkbox">Still Department <span class="badge">1113+</span><br>
+							<input type="checkbox">Story Deaprtment <span class="badge">1553+</span><br>
+							<input type="checkbox">Stunt/Fight Department <span class="badge">1113+</span><br>
+							<input type="checkbox">Administrative Department <span class="badge">123+</span><br>
+							<input type="checkbox">Art Department <span class="badge">1333+</span><br>
+							<input type="checkbox">Artists <span class="badge">311+</span><br>
+							<input type="checkbox">Choreographer <span class="badge">213+</span><br>
+							<input type="checkbox">Cinematographer <span class="badge">1008+</span>
 						</div>
 
 					</div>
+                   
 
 
 				</div>
 				
 				<!-- END OF COMPANY SECTION  -->
 
-				<!-- 	INDUSTRY SECTION -->
-				<div class="right-nav right-nav-sp">
-					<div class="row refine mt">
-						<div class="side-head">
-							<button type="button" class="btn btn-link"
-								data-toggle="collapse" data-target="#ind">
-								<span class="glyphicon glyphicon-triangle-right"></span>Industry
-							</button>
-						</div>
-						<div id="ind" class="collapse inlineText">
-
-							<input type="checkbox" name="industry"
-								value="IT-Software/Software Services">IT-Software/Software
-							Services<br> <input type="checkbox" name="industry"
-								value="BPO/Call Center/ITES">BPO/Call Center/ITES <br>
-							<input type="checkbox" name="company"
-								value="Pharma/Biotech/Clinical Research">Pharma/Biotech/Clinical
-							Research<br> <input type="checkbox" name="industry"
-								value="Banking/Financial Services/Broking">Banking/Financial
-							Services/Broking<br> <input type="checkbox" name="industry"
-								value="Recruitment/Staffing">Recruitment/Staffing<br>
-
-						</div>
-
-					</div>
-
-
-				</div>
-			<!-- END OFINDUSTRY SECTION -->
+				
 			
 					<!-- SALARY SECTION -->
 
@@ -251,7 +249,7 @@ input[type="checkbox"], input[type="radio"] {
 						<div class="side-head">
 							<button type="button" class="btn btn-link"
 								data-toggle="collapse" data-target="#sal">
-								<span class="glyphicon glyphicon-triangle-right"></span>Salary
+								<span class="glyphicon glyphicon-triangle-right"></span>Salary <span class="badge">100+</span>
 							</button>
 						</div>
 						<div id="sal" class="collapse inlineText">
@@ -280,7 +278,7 @@ input[type="checkbox"], input[type="radio"] {
 						<div class="side-head">
 							<button type="button" class="btn btn-link"
 								data-toggle="collapse" data-target="#edu">
-								<span class="glyphicon glyphicon-triangle-right"></span>Education
+								<span class="glyphicon glyphicon-triangle-right"></span>Education <span class="badge">122+</span>
 							</button>
 						</div>
 						<div id="edu" class="collapse inlineText">
@@ -302,83 +300,31 @@ input[type="checkbox"], input[type="radio"] {
 				</div>
 			<!-- 	END OF EDUCATION SECTION -->
 			
-			<!-- EMP TYPE -->
-
-				<div class="right-nav right-nav-sp">
-					<div class="row refine mt">
-						<div class="side-head">
-							<button type="button" class="btn btn-link"
-								data-toggle="collapse" data-target="#empty">
-								<span class="glyphicon glyphicon-triangle-right"></span>Employer
-								Type
-							</button>
-						</div>
-						<div id="empty" class="collapse inlineText">
-							<input type="checkbox" name="empType" value="Company Jobs">Company
-							Jobs<br> <input type="checkbox" name="empType"
-								value="Consultant Jobs">Consultant Jobs
+			</div>
 
 
-						</div>
-
-					</div>
-
-
-				</div>
-				<!-- EMP TYPE ENDS HERE -->
-
-<!-- JOBS TYPE -->
-				<div class="right-nav right-nav-sp">
-					<div class="row refine mt">
-						<div class="side-head">
-							<button type="button" class="btn btn-link"
-								data-toggle="collapse" data-target="#jobty">
-								<span class="glyphicon glyphicon-triangle-right"></span>Job Type
-							</button>
-						</div>
-						<div id="jobty" class="collapse inlineText">
-							<input type="checkbox" name="jobType" value="All Jobs">All
-							Jobs<br> <input type="checkbox" name="jobType"
-								value="Premium Engg">Premium Engg <br> <input
-								type="checkbox" name="jobType" value="Premium MBA">Premium
-							MBA<br> <input type="checkbox" name="jobType"
-								value="International">International<br> <input
-								type="checkbox" name="jobType" value="PSU/Government">PSU/Government<br>
-
-						</div>
-
-					</div>
+				
 
 						
 						
-						<button type="button" class="subButton mb">Submit</button>
+						
 					
-				</div>
-<!-- JOBS TYPE ENDS HERE -->
 				
-				
-				
-				<!-- <div class="right-nav" >
-					<div class="row refine butt" style="margin-top: 2px;">
-						
-						<button type="button" class="subButton">Submit</button>
-					</div>
-				</div> -->
 
-			</div> <!-- RIGHT NAVIGATION ENDS HERE -->
 
 
 
 		<!-- 	START OF MIDDLE CONTENT -->
 
-			<div class="col-md-8 col-sm-12">
+			<div class="col-md-8 col-sm-12 col-xs-12 xspt">
 				
-				<div class="middle-content list org">
-				  <div class="row xspt">
-				  <div class="col-md-6 col-sm-6 jobsml">1-50 of 21322 Jobs in Hyderabad</div>
-				   <div class="col-md-4 col-sm-4">Sort by:Relevance</div>
-				    <div class="col-md-1 col-sm-1"><a href="#"><i class="fa fa-bars"></i></a></div>
-				     <div class="col-md-1 col-sm-1 listml"><a href="#"><i class="fa fa-list"></i></a></div>
+				<div class="middle-content list org visible-md">
+				  <div class="row">
+				  
+				  <div class="col-md-6 col-sm-6 col-xs-6 jobsml">1-50 of 21322 Jobs in Hyderabad</div>
+				   <div class="col-md-4 col-sm-4 col-xs-4">Sort by:Relevance</div>
+				    <div class="col-md-1 col-sm-1 col-xs-1"><a href="#"><i class="fa fa-bars"></i></a></div>
+				     <div class="col-md-1 col-sm-1 col-xs-1 listml"><a href="#"><i class="fa fa-list"></i></a></div>
 				      
 				  
 				  </div>
@@ -387,43 +333,42 @@ input[type="checkbox"], input[type="radio"] {
 				<!-- 1ST BLOCK -->
 				<div class="middle-content">
 					<div class="row pl">
-						<div class="col-md-9 col-sm-9">
-							<div class="compName">
+						<div class="col-md-9 col-sm-9 col-xs-9">
+							<div class="compName compNRes">
 								<span class="glyphicon glyphicon-fire" style="color: red;"></span>
 								AWS(amazon Web Services)
 							</div>
 							<div class="org">ASAP Info Systems PVT Ltd</div>
 						</div>
-						<div class="col-md-3 col-sm-3 img imgml">
-							<img src="Resources/images/compIcons/amazon.gif"
+						<div class="clearfix visible-sm-block"></div>
+						<div class="col-md-3 col-sm-3 col-xs-3 img imgml">
+							<img class="imgRes" src="Resources/images/compIcons/amazon.gif"
 								alt="company icon ">
 						</div>
 					</div>
 					<div class="row right-nav-sp">
 
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org ">2-7 yrs</div>
-							<div class="col-md-9 col-sm-9 org">Hyderabad/Secundrabad,
+							<div class="col-md-3 col-sm-3 col-xs-3 org ">2-7 yrs</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 org">Hyderabad/Secundrabad,
 								Bengaluru/Bangalore,Kolkata,Pune</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">KeySkills:</div>
-							<div class="col-md-9 col-sm-9 skill">Web Services,AWS,Amazon Web
+							<div class="col-md-3 col-sm-3 col-xs-3 org">KeySkills:</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">Web Services,AWS,Amazon Web
 								Services</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">Job Description:</div>
-							<div class="col-md-9 col-sm-9 skill">Greetings from ASAP Infosystems
+							<div class="col-md-3 col-sm-3 col-xs-3 org">Job Description:</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">Greetings from ASAP Infosystems
 								My name is Ms. Lavanya, My specialty is to find Great & a...</div>
 						</div>
 						<div class="row space other">
-							<div class="col-md-1 col-sm-1">
-								<i class="fa fa-star"></i>
-							</div>
-							<div class="col-md-5 col-sm-5">
+							
+							<div class="col-md-6 col-sm-6 col-xs-6">
 								<i class="fa fa-inr"></i> 3,00,000 - 8,00,000 P.A
 							</div>
-							<div class="col-md-6 col-sm-6 posted">Posted by Lavanya, Just Now</div>
+							<div class="col-md-6 col-sm-6 col-xs-6 posted">Posted by Lavanya, Just Now</div>
 
 						</div>
 
@@ -433,41 +378,39 @@ input[type="checkbox"], input[type="radio"] {
 				<!-- 2ND BLOCK -->
 				<div class="middle-content middlemt" >
 					<div class="row pl">
-						<div class="col-md-9 col-sm-9">
-							<div class="compName">
+						<div class="col-md-9 col-sm-9 col-xs-9">
+							<div class="compName compNRes">
 								<span class="glyphicon glyphicon-fire" style="color: red;"></span>
 								Maximo Developer
 							</div>
 							<div class="org">ASAP Info Systems PVT Ltd</div>
 						</div>
-						<div class="col-md-3 col-sm-3 img imgml" >
-							<img src="Resources/images/compIcons/amazon.gif"
+						<div class="col-md-3 col-sm-3 col-xs-3 img imgml" >
+							<img class="imgRes" src="Resources/images/compIcons/amazon.gif"
 								alt="company icon ">
 						</div>
 					</div>
 					<div class="row right-nav-sp">
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">2-7 yrs</div>
-							<div class="col-md-9 col-sm-9 org">Hyderabad/Secundrabad,
+							<div class="col-md-3 col-sm-3 col-xs-3 org">2-7 yrs</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 org">Hyderabad/Secundrabad,
 								Bengaluru/Bangalore,Kolkata,Pune</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">KeySkills:</div>
-							<div class="col-md-9 col-sm-9 skill">Maximo Developer</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 org">KeySkills:</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">Maximo Developer</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">Job Description:</div>
-							<div class="col-md-9 col-sm-9 skill">Greetings from ASAP Infosystems
+							<div class="col-md-3 col-sm-3 col-xs-3 org">Job Description:</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">Greetings from ASAP Infosystems
 								My name is Ms. Lavanya, My specialty is to find Great & a...</div>
 						</div>
 						<div class="row space other">
-							<div class="col-md-1 col-sm-1">
-								<i class="fa fa-star"></i>
-							</div>
-							<div class="col-md-5 col-sm-5">
+							
+							<div class="col-md-6 col-sm-6 col-xs-6">
 								<i class="fa fa-inr"></i> 2,50,000 - 7,50,000 P.A
 							</div>
-							<div class="col-md-6 col-sm-6 posted">Posted by Lavanya, Just Now</div>
+							<div class="col-md-6 col-sm-6 col-xs-6 posted">Posted by Lavanya, Just Now</div>
 						</div>
 					</div>
 				</div><!-- END OF 2ND BLOCK -->
@@ -476,42 +419,40 @@ input[type="checkbox"], input[type="radio"] {
 					<!-- 3RD BLOCK -->
 				<div class="middle-content middlemt">
 					<div class="row pl">
-						<div class="col-md-9 col-sm-9">
-							<div class="compName">
+						<div class="col-md-9 col-sm-9 col-xs-9">
+							<div class="compName compNRes">
 								<span class="glyphicon glyphicon-fire" style="color: red;"></span>
 								Accounts Associate(US Process)
 							</div>
 							<div class="org">Gobrah Management Consulting Services
 								Pvt.Ltd</div>
 						</div>
-						<div class="col-md-3 col-sm-3 img imgml">
-							<img src="Resources/images/compIcons/amazon.gif"
+						<div class="col-md-3 col-sm-3 col-xs-3 img imgml">
+							<img class="imgRes" src="Resources/images/compIcons/amazon.gif"
 								alt="company icon ">
 						</div>
 					</div>
 					<div class="row right-nav-sp">
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">2-5 yrs</div>
-							<div class="col-md-9 col-sm-9 org">Hyderabad/Secundrabad</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 org">2-5 yrs</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 org">Hyderabad/Secundrabad</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">KeySkills:</div>
-							<div class="col-md-9 col-sm-9 skill">Accounts Payable, accounts
+							<div class="col-md-3 col-sm-3 col-xs-3 org">KeySkills:</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">Accounts Payable, accounts
 								receivable, general ledger, payables,ap</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">Job Description:</div>
-							<div class="col-md-9 col-sm-9 skill">Urgent opening for Reputed IT
+							<div class="col-md-3 col-sm-3 col-xs-3 org">Job Description:</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">Urgent opening for Reputed IT
 								Client Experience:2-5 yrs Role: US...</div>
 						</div>
 						<div class="row space other">
-							<div class="col-md-1 col-sm-1">
-								<i class="fa fa-star"></i>
-							</div>
-							<div class="col-md-5 col-sm-5">
+							
+							<div class="col-md-6 col-sm-6 col-xs-6">
 								<i class="fa fa-inr"></i> Not Disclosed
 							</div>
-							<div class="col-md-6 col-sm-6 posted">Posted by Ramya Reddy, Just
+							<div class="col-md-6 col-sm-6 col-xs-6 posted">Posted by Ramya Reddy, Just
 								Now</div>
 						</div>
 					</div>
@@ -521,41 +462,39 @@ input[type="checkbox"], input[type="radio"] {
 				<!-- 	4TH BLOCK -->
 				<div class="middle-content middlemt">
 					<div class="row pl">
-						<div class="col-md-9 col-sm-9">
-							<div class="compName">
+						<div class="col-md-9 col-sm-9 col-xs-9">
+							<div class="compName compNRes">
 								<span class="glyphicon glyphicon-fire" style="color: red;"></span>
 								Urgent Openings for Tamil Speakers in Hyderabad Location
 							</div>
 						</div>
-						<div class="col-md-3 col-sm-3 img imgml">
-							<img src="Resources/images/compIcons/amazon.gif"
+						<div class="col-md-3 col-sm-3 col-xs-3 img imgml">
+							<img class="imgRes" src="Resources/images/compIcons/amazon.gif"
 								alt="company icon ">
 						</div>
 					</div>
 					<div class="row right-nav-sp">
 						<div class="org">Adventures International Private Limited</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">0-2 yrs</div>
-							<div class="col-md-9 col-sm-9 org">Hyderabad/Secundrabad, Chennai</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 org">0-2 yrs</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 org">Hyderabad/Secundrabad, Chennai</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">KeySkills:</div>
-							<div class="col-md-9 col-sm-9 skill">BPO, Customer Support,
+							<div class="col-md-3 col-sm-3 col-xs-3 org">KeySkills:</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">BPO, Customer Support,
 								Communication Skills, bpo voice, call center voice...</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">Job Description:</div>
-							<div class="col-md-9 col-sm-9 skill">Greetings from ASAP Infosystems
+							<div class="col-md-3 col-sm-3 col-xs-3 org">Job Description:</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">Greetings from ASAP Infosystems
 								My name is Ms. Lavanya, My specialty is to find Great & a...</div>
 						</div>
 						<div class="row space other">
-							<div class="col-md-1 col-sm-1">
-								<i class="fa fa-star"></i>
-							</div>
-							<div class="col-md-5 col-sm-5">
+							
+							<div class="col-md-6 col-sm-6 col-xs-6">
 								<i class="fa fa-inr"></i> 1,50,000 - 1,50,000 P.A
 							</div>
-							<div class="col-md-6 col-sm-6 posted">Posted by jyotsna@adso.com,
+							<div class="col-md-6 col-sm-6 col-xs-6 posted">Posted by jyotsna@adso.com,
 								Just Now</div>
 						</div>
 					</div>
@@ -564,43 +503,41 @@ input[type="checkbox"], input[type="radio"] {
       <!-- 5TH BLOCK -->
 				<div class="middle-content middlemt">
 					<div class="row pl">
-						<div class="col-md-9 col-sm-9">
-							<div class="compName">
+						<div class="col-md-9 col-sm-9 col-xs-9">
+							<div class="compName compNRes">
 								<span class="glyphicon glyphicon-fire" style="color: red;"></span>
 								Assistant Professor (Contract) - Material Science &
 								Metallurgical Engineering
 							</div>
 
 						</div>
-						<div class="col-md-3 col-sm-3 img imgml">
-							<img src="Resources/images/compIcons/amazon.gif"
+						<div class="col-md-3 col-sm-3 col-xs-3 img imgml">
+							<img class="imgRes" src="Resources/images/compIcons/amazon.gif"
 								alt="company icon ">
 						</div>
 					</div>
 					<div class="row right-nav-sp">
 						<div class="org">Indian Institute of Technology Hyderabad</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">2-5 yrs</div>
-							<div class="col-md-9 col-sm-9 org">Hyderabad/Secundrabad, Pune</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 org">2-5 yrs</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 org">Hyderabad/Secundrabad, Pune</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">KeySkills:</div>
-							<div class="col-md-9 col-sm-9 skill">HTML%,CSS,Javascript,OOPS
+							<div class="col-md-3 col-sm-3 col-xs-3 org">KeySkills:</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">HTML%,CSS,Javascript,OOPS
 								Concepts,PHP,Bootstrap,Jquery</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">Job Description:</div>
-							<div class="col-md-9 col-sm-9 skill">Greetings from ASAP Infosystems
+							<div class="col-md-3 col-sm-3 col-xs-3 org">Job Description:</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">Greetings from ASAP Infosystems
 								My name is Ms. Lavanya, My specialty is to find Great & a...</div>
 						</div>
 						<div class="row space other">
-							<div class="col-md-1 col-sm-1">
-								<i class="fa fa-star"></i>
-							</div>
-							<div class="col-md-5 col-sm-5">
+							
+							<div class="col-md-6 col-sm-6 col-xs-6">
 								<i class="fa fa-inr"></i> 2,50,000 - 7,50,000 P.A
 							</div>
-							<div class="col-md-6 col-sm-6 posted">Posted by Lavanya, Just Now</div>
+							<div class="col-md-6 col-sm-6 col-xs-6 posted">Posted by Lavanya, Just Now</div>
 						</div>
 					</div>
 				</div>  <!-- 5TH BLOCK -->
@@ -608,42 +545,40 @@ input[type="checkbox"], input[type="radio"] {
 						<!-- 	<6TH BLOCK -->
 				<div class="middle-content middlemt">
 					<div class="row pl">
-						<div class="col-md-9 col-sm-9">
-							<div class="compName">
+						<div class="col-md-9 col-sm-9 col-xs-9">
+							<div class="compName compNRes">
 								<span class="glyphicon glyphicon-fire" style="color: red;"></span>
 								Assistant Professor (Contract) - Physics
 							</div>
 							<div class="org">Indian Institute of Technology Hyderabad</div>
 						</div>
-						<div class="col-md-3 col-sm-3 img" style="margin-left: -9px;">
-							<img src="Resources/images/compIcons/amazon.gif"
+						<div class="col-md-3 col-sm-3 col-xs-3 img" style="margin-left: -9px;">
+							<img class="imgRes" src="Resources/images/compIcons/amazon.gif"
 								alt="company icon ">
 						</div>
 					</div>
 					<div class="row right-nav-sp">
 
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">2-5yrs</div>
-							<div class="col-md-9 col-sm-9 org">Hyderabad/Secundrabad, Pune</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 org">2-5yrs</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 org">Hyderabad/Secundrabad, Pune</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">KeySkills</div>
-							<div class="col-md-9 col-sm-9 skill">HTML%,CSS,Javascript,OOPS
+							<div class="col-md-3 col-sm-3 col-xs-3 org">KeySkills</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">HTML%,CSS,Javascript,OOPS
 								Concepts,PHP,Bootstrap,Jquery</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">Job Description:</div>
-							<div class="col-md-9 col-sm-9 skill">Greetings from ASAP Infosystems
+							<div class="col-md-3 col-sm-3 col-xs-3 org">Job Description:</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">Greetings from ASAP Infosystems
 								My name is Ms. Lavanya, My specialty is to find Great & a...</div>
 						</div>
 						<div class="row space other">
-							<div class="col-md-1 col-sm-1">
-								<i class="fa fa-star"></i>
-							</div>
-							<div class="col-md-5 col-sm-5">
+							
+							<div class="col-md-6 col-sm-6 col-xs-6">
 								<i class="fa fa-inr"></i> 2,50,000 - 7,50,000 P.A
 							</div>
-							<div class="col-md-6 col-sm-6 posted">Posted by Lavanya, Just Now</div>
+							<div class="col-md-6 col-sm-6 col-xs-6 posted">Posted by Lavanya, Just Now</div>
 						</div>
 					</div>
 				</div>
@@ -652,42 +587,40 @@ input[type="checkbox"], input[type="radio"] {
 <!-- 7TH BLOCK -->
 				<div class="middle-content middlemt">
 					<div class="row pl">
-						<div class="col-md-9 col-sm-9">
-							<div class="compName">
+						<div class="col-md-9 col-sm-9 col-xs-9">
+							<div class="compName compNRes">
 								<span class="glyphicon glyphicon-fire" style="color: red;"></span>
 								HTML Game Developer
 							</div>
 							<div class="org">CHRP - INDIA Private Limited</div>
 						</div>
-						<div class="col-md-3 col-sm-3 img imgml">
-							<img src="Resources/images/compIcons/amazon.gif"
+						<div class="col-md-3 col-sm-3 col-xs-3 img imgml">
+							<img class="imgRes" src="Resources/images/compIcons/amazon.gif"
 								alt="company icon ">
 						</div>
 					</div>
 					<div class="row right-nav-sp">
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">2-5yrs</div>
-							<div class="col-md-9 col-sm-9 org">Hyderabad/Secundrabad, Pune</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 org">2-5yrs</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 org">Hyderabad/Secundrabad, Pune</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">KeySkills</div>
-							<div class="col-md-9 col-sm-9 skill">HTML%,CSS,Javascript,OOPS
+							<div class="col-md-3 col-sm-3 col-xs-3 org">KeySkills</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">HTML%,CSS,Javascript,OOPS
 								Concepts,PHP,Bootstrap,Jquery</div>
 						</div>
 						<div class="row space">
 
-							<div class="col-md-3 col-sm-3 org">Job Description:</div>
-							<div class="col-md-9 col-sm-9 skill">Greetings from ASAP Infosystems
+							<div class="col-md-3 col-sm-3 col-xs-3 org">Job Description:</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">Greetings from ASAP Infosystems
 								My name is Ms. Lavanya, My specialty is to find Great & a...</div>
 						</div>
 						<div class="row space other">
-							<div class="col-md-1 col-sm-1">
-								<i class="fa fa-star"></i>
-							</div>
-							<div class="col-md-5 col-sm-5">
+							<div class="col-md-6 col-sm-6 col-xs-6">
 								<i class="fa fa-inr"></i> 2,50,000 - 7,50,000 P.A
 							</div>
-							<div class="col-md-6 col-sm-6 posted">Posted by Lavanya, Just Now</div>
+							
+							<div class="col-md-6 col-sm-6 col-xs-6 posted">Posted by Lavanya, Just Now</div>
 						</div>
 					</div>
 				</div>
@@ -696,42 +629,40 @@ input[type="checkbox"], input[type="radio"] {
 <!-- 8TH BLOCK -->
 				<div class="middle-content middlemt">
 					<div class="row pl">
-						<div class="col-md-9 col-sm-9">
-							<div class="compName">
+						<div class="col-md-9 col-sm-9 col-xs-9">
+							<div class="compName compNRes">
 								<span class="glyphicon glyphicon-fire" style="color: red;"></span>
 								Opening For QA Engineer - Expected to Join Immediately
 							</div>
 							<div class="org">FTD India Pvt. Ltd</div>
 						</div>
-						<div class="col-md-3 col-sm-3 img imgml">
-							<img src="Resources/images/compIcons/amazon.gif"
+						<div class="col-md-3 col-sm-3 col-xs-3 img imgml">
+							<img class="imgRes" src="Resources/images/compIcons/amazon.gif"
 								alt="company icon ">
 						</div>
 					</div>
 					<div class="row right-nav-sp">
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">2-5yrs</div>
-							<div class="col-md-9 col-sm-9 org">Hyderabad/Secundrabad, Pune</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 org">2-5yrs</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 org">Hyderabad/Secundrabad, Pune</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">KeySkills:</div>
-							<div class="col-md-9 col-sm-9 skill">STLC, SDLC, Debugging, Quality
+							<div class="col-md-3 col-sm-3 col-xs-3 org">KeySkills:</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">STLC, SDLC, Debugging, Quality
 								Assurance / Testing, Software Testing...</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">Job Description:</div>
-							<div class="col-md-9 col-sm-9 skill">1. Understand and follow all
+							<div class="col-md-3 col-sm-3 col-xs-3 org">Job Description:</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">1. Understand and follow all
 								the standard procedures in QA team 2. Understand technology and
 								domain ...</div>
 						</div>
 						<div class="row space other">
-							<div class="col-md-1 col-sm-1">
-								<i class="fa fa-star"></i>
-							</div>
-							<div class="col-md-5 col-sm-5">
+							
+							<div class="col-md-6 col-sm-6 col-xs-6">
 								<i class="fa fa-inr"></i> 2,50,000 - 7,50,000 P.A
 							</div>
-							<div class="col-md-6 col-sm-6 posted">Posted by Lavanya, Just Now</div>
+							<div class="col-md-6 col-sm-6 col-xs-6 posted">Posted by Lavanya, Just Now</div>
 						</div>
 					</div>
 				</div>
@@ -741,41 +672,39 @@ input[type="checkbox"], input[type="radio"] {
 <!-- <9TH BLOCK -->
 				<div class="middle-content middlemt">
 					<div class="row pl">
-						<div class="col-md-9 col-sm-9">
-							<div class="compName">
+						<div class="col-md-9 col-sm-9 col-xs-9">
+							<div class="compName compNRes">
 								<span class="glyphicon glyphicon-fire" style="color: red;"></span>
 								Opportunity for Microsoft Dot Net Developers @ Hyderabad
 							</div>
 							<div class="org">Tech Mahindra Ltd.</div>
 						</div>
-						<div class="col-md-3 col-sm-3 img imgml">
-							<img src="Resources/images/compIcons/tech.gif"
+						<div class="col-md-3 col-sm-3 col-xs-3 img imgml">
+							<img class="imgRes" src="Resources/images/compIcons/tech.gif"
 								alt="company icon ">
 						</div>
 					</div>
 					<div class="row right-nav-sp">
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">2-5yrs</div>
-							<div class="col-md-9 col-sm-9 org">Hyderabad/Secundrabad, Pune</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 org">2-5yrs</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 org">Hyderabad/Secundrabad, Pune</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">KeySkills</div>
-							<div class="col-md-9 col-sm-9 skill">C#,.Net Version 3 and Above,
+							<div class="col-md-3 col-sm-3 col-xs-3 org">KeySkills</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">C#,.Net Version 3 and Above,
 								MSBuild Scripting, MVC, Powershells</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">Job Description:</div>
-							<div class="col-md-9 col-sm-9 skill">Greetings from ASAP Infosystems
+							<div class="col-md-3 col-sm-3 col-xs-3 org">Job Description:</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">Greetings from ASAP Infosystems
 								My name is Ms. Lavanya, My specialty is to find Great & a...</div>
 						</div>
 						<div class="row space other">
-							<div class="col-md-1 col-sm-1">
-								<i class="fa fa-star"></i>
-							</div>
-							<div class="col-md-5 col-sm-5">
+							
+							<div class="col-md-6 col-sm-6 col-xs-6">
 								<i class="fa fa-inr"></i> 2,50,000 - 7,50,000 P.A
 							</div>
-							<div class="col-md-6 col-sm-6 posted">Posted by Lavanya, Just Now</div>
+							<div class="col-md-6 col-sm-6 col-xs-6 posted">Posted by Lavanya, Just Now</div>
 						</div>
 					</div>
 				</div>
@@ -785,41 +714,39 @@ input[type="checkbox"], input[type="radio"] {
 <!-- 10TH BLOCK -->
 				<div class="middle-content middlemt">
 					<div class="row pl">
-						<div class="col-md-9 col-sm-9">
-							<div class="compName">
+						<div class="col-md-9 col-sm-9 col-xs-9">
+							<div class="compName compNRes">
 								<span class="glyphicon glyphicon-fire" style="color: red;"></span>
 								Client Support
 							</div>
 							<div class="org">Infobrain Technologies Pvt. Ltd.</div>
 						</div>
-						<div class="col-md-3 col-sm-3 img imgml">
-							<img src="Resources/images/compIcons/amazon.gif"
+						<div class="col-md-3 col-sm-3 col-xs-3 img imgml">
+							<img class="imgRes" src="Resources/images/compIcons/amazon.gif"
 								alt="company icon ">
 						</div>
 					</div>
 					<div class="row right-nav-sp">
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">2-5yrs</div>
-							<div class="col-md-9 col-sm-9 org">Hyderabad/Secundrabad, Pune</div>
+							<div class="col-md-3 col-sm-3 col-xs-3 org">2-5yrs</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 org">Hyderabad/Secundrabad, Pune</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-3 org">KeySkills:</div>
-							<div class="col-md-9 col-sm-9 skill">Client Servicing, Client
+							<div class="col-md-3 col-sm-3 col-xs-3 org">KeySkills:</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">Client Servicing, Client
 								Interaction, client Support</div>
 						</div>
 						<div class="row space">
-							<div class="col-md-3 col-sm-9 org">Job Description:</div>
-							<div class="col-md-9 col-sm-9 skill">Job Overview: Customer Support
+							<div class="col-md-3 col-sm-3 col-xs-3 org">Job Description:</div>
+							<div class="col-md-9 col-sm-9 col-xs-9 skill">Job Overview: Customer Support
 								Rep The Client Support provides resolutions to client issues ...</div>
 						</div>
 						<div class="row space other">
-							<div class="col-md-1 col-sm-1">
-								<i class="fa fa-star"></i>
-							</div>
-							<div class="col-md-5 col-sm-5">
+							
+							<div class="col-md-6 col-sm-6 col-xs-6">
 								<i class="fa fa-inr"></i> 2,50,000 - 7,50,000 P.A
 							</div>
-							<div class="col-md-6 col-sm-6 posted">Posted by Lavanya, Just Now</div>
+							<div class="col-md-6 col-sm-6 col-xs-6 posted">Posted by Lavanya, Just Now</div>
 						</div>
 					</div>
 				</div><!-- 10TH BLOCK -->
@@ -828,6 +755,7 @@ input[type="checkbox"], input[type="radio"] {
 
 		</div>
 	</div> <!-- end of main page -->
+	
 	
 
 
@@ -846,62 +774,48 @@ input[type="checkbox"], input[type="radio"] {
 	
 $(document).ready(function(){
   $("#demo").on("hide.bs.collapse", function(){
-    $(".btn").html('<span class="glyphicon glyphicon-triangle-right"></span> Location');
+    $(".btn").html('<span class="glyphicon glyphicon-triangle-right"></span>');
   });
-  $("#demo").on("show.bs.collapse", function(){
-    $(".btn").html('<span class="glyphicon glyphicon-triangle-bottom"></span> Location');
-  });
+  
 });
 
 $(document).ready(function(){
 	  $("#comp").on("hide.bs.collapse", function(){
-	    $(".btn").html('<span class="glyphicon glyphicon-triangle-right"></span> Location');
+	    $(".btn").html('<span class="glyphicon glyphicon-triangle-right"></span>');
 	  });
-	  $("#comp").on("show.bs.collapse", function(){
-	    $(".btn").html('<span class="glyphicon glyphicon-triangle-bottom"></span> Location');
-	  });
+	  
 	});
 $(document).ready(function(){
 	  $("#ind").on("hide.bs.collapse", function(){
-	    $(".btn").html('<span class="glyphicon glyphicon-triangle-right"></span> Location');
+	    $(".btn").html('<span class="glyphicon glyphicon-triangle-right"></span>');
 	  });
-	  $("#ind").on("show.bs.collapse", function(){
-	    $(".btn").html('<span class="glyphicon glyphicon-triangle-bottom"></span> Location');
-	  });
+	  
 	});
 $(document).ready(function(){
 	  $("#sal").on("hide.bs.collapse", function(){
-	    $(".btn").html('<span class="glyphicon glyphicon-triangle-right"></span> Location');
+	    $(".btn").html('<span class="glyphicon glyphicon-triangle-right"></span>');
 	  });
-	  $("#sal").on("show.bs.collapse", function(){
-	    $(".btn").html('<span class="glyphicon glyphicon-triangle-bottom"></span> Location');
-	  });
+	  
 	});
 });
 $(document).ready(function(){
 	  $("#edu").on("hide.bs.collapse", function(){
-	    $(".btn").html('<span class="glyphicon glyphicon-triangle-right"></span> Location');
+	    $(".btn").html('<span class="glyphicon glyphicon-triangle-right"></span>');
 	  });
-	  $("#edu").on("show.bs.collapse", function(){
-	    $(".btn").html('<span class="glyphicon glyphicon-triangle-bottom"></span> Location');
-	  });
+	  
 	});
 });
 $(document).ready(function(){
 	  $("#empty").on("hide.bs.collapse", function(){
-	    $(".btn").html('<span class="glyphicon glyphicon-triangle-right"></span> Location');
+	    $(".btn").html('<span class="glyphicon glyphicon-triangle-right"></span>');
 	  });
-	  $("#empty").on("show.bs.collapse", function(){
-	    $(".btn").html('<span class="glyphicon glyphicon-triangle-bottom"></span> Location');
-	  });
+	  
 	});
 $(document).ready(function(){
 	  $("#jobty").on("hide.bs.collapse", function(){
-	    $(".btn").html('<span class="glyphicon glyphicon-triangle-right"></span> Location');
+	    $(".btn").html('<span class="glyphicon glyphicon-triangle-right"></span>');
 	  });
-	  $("#jobty").on("show.bs.collapse", function(){
-	    $(".btn").html('<span class="glyphicon glyphicon-triangle-bottom"></span> Location');
-	  });
+	  
 	});
 </script>
 
