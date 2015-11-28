@@ -1,19 +1,76 @@
-@media (max-width: 480px) { 
-	
+@media ( max-width : 480px) {
 	body {
 		overflow-y: scroll !important;
-		overflow-x: hidden !important;	
+		overflow-x: hidden !important;
 	}
-	
-	
 }
 
-
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-	.xspt{
-	margin-top: 7px;
+	.xspt {
+		margin-top: 7px;
 	}
-	
-	
-	
+	.resCenter {
+		padding-top: 17px;
+		text-align: center;
+	}
+	.mainSearch{
+height: inherit;
+line-height: inherit;
+width:inherit;
+}
+	.lDvdr {
+		border-left: none;
+		margin-top: 0;
+	}
+	.mDvdr {
+		border-top: 1px solid #E5E5E5;
+		margin-top: 15px;
+	}
+	.sectormt {
+		margin-top: 13px;
+	}
+	.paddingRes {
+		padding: 12px 10px;
+	}
+	.padRes {
+		padding: 12px 23px;
+	}
+	.pl {
+		padding-left: 0px;
+	}
+	.mb {
+		margin-bottom: 15px;
+		margin-left: 0px;
+	}
+	.postpl {
+		padding-left: 10px;
+	}
+	.pvtpl {
+		padding-left: 17px;
+	}
+	.regml{
+	margin-left: 0px;
+}
+.listType {
+	margin-left: -27px;
+}
+.imgRes{
+	width: 80px;
+	margin-left: -26px;
+}
+.compNRes{
+	font-size: 12px;
+	text-align: inherit;
+	padding-left: 7px;
+}
+.org{
+	padding-left: 21px;
+	font-size: 11px;
+}
+.skill{
+	font-size: 11px;
+}
+ .space{
+ font-size: 11px;
+ }
 }
