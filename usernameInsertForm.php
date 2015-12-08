@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<title></title>
+<title>User Data</title>
 
 		
 		<?php 
