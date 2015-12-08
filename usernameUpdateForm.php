@@ -273,7 +273,7 @@ submit:'submit',
 		 
 	}
 	,function(data,status){
-			alert('succsessfully Updated');
+			alert('succsessfully Updated'+data);
 		
 		});  }); });
 
