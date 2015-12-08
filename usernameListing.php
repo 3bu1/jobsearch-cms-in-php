@@ -29,9 +29,9 @@ include('database/Insert.php');
 <th>personalWebsite</th>
 <th>languages</th>
 <th>insearchofjob</th>
-<th>experianceid</th>
-<th>galleryid</th>
-<th>skillid</th>
+<th>experiance </th>
+<th>gallery </th>
+<th>skill </th>
 <th>Edit</th>
 <th>Delete</th></tr>
                                               </thead>
@@ -57,9 +57,15 @@ include('database/Insert.php');
 <td><?php echo $projects[$i]['personalWebsite'] ?></td>
 <td><?php echo $projects[$i]['languages'] ?></td>
 <td><?php echo $projects[$i]['insearchofjob'] ?></td>
-<td><?php echo $projects[$i]['experianceid'] ?></td>
-<td><?php echo $projects[$i]['galleryid'] ?></td>
-<td><?php echo $projects[$i]['skillid'] ?></td>
+<td><a href="experianceUpdateForm.php?experianceid=<?php echo $projects[$i]['experianceid'] ?>">
+                                                           Edit
+                                                        </a>   </td>                  
+<td> <a href="galleryUpdateForm.php?galleryid=<?php echo $projects[$i]['galleryid'] ?>">
+                                                           Edit
+                                                        </a></td>
+<td> <a href="skillUpdateForm.php?skillid=<?php echo $projects[$i]['skillid'] ?>">
+                                                           Edit
+                                                        </a></td>
 <td>
            <a href="usernameUpdateForm.php?usernameid=<?php echo $projects[$i]['usernameid'] ?>">
                                                            Edit

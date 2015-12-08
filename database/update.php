@@ -30,13 +30,15 @@ class update{
 				}
 				
 			$sql="UPDATE ".$fromtable." SET ".$value." WHERE ".$wherecolumn."=?";
-			//echo $sql;
+			echo $sql;
+			
+			//print_r($valueArray);
 			//$sql = "SELECT * FROM ".$fromtable." WHERE ".$wherecolumn." = ?"; // Using prepated statements for where column value
 			$stmt = $con->prepare($sql);
 			
 			for($r=1;$r<=$count;$r++){
 				$stmt->bindValue($r, $valueArray[$r-1]); // Binding ? value with the sql statement
-				//echo "<br/>".($r).$valueArray[$r-1];
+				echo $valueArray[$r-1]." ## ";
 				if($count==$r){
 					$stmt->bindValue($r+1, $columnvalue);
 					//echo "<br/>".($r).$columnvalue;
@@ -45,7 +47,7 @@ class update{
 				}
 			}
 		   $stmt->execute();
-			//echo "true";
+			echo "true";
 		}
 		catch(Exception $e) {
 			return $e;

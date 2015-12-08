@@ -32,9 +32,9 @@ $getAlpha = new Select;
 		$companydetails = array();
 		$companydetails = $getAlpha->selectWhere("username", "email", $_POST['registerEmail']);
 		//print_r($companydetails);
-		//echo json_encode($companydetails);
-		$companydetails = json_encode(array('item' => $companydetails));
-		echo $companydetails;
+		echo json_encode($companydetails);
+		//$companydetails = json_encode(array('item' => $companydetails));
+		//echo $companydetails;
 }
 ?>
 
@@ -635,8 +635,8 @@ registerEmail : registerEmail,
 
 }
 	,function(data,status){
-		
-		var obj = jQuery.parseJSON( data.item);
+		alert(data.item);
+		var obj = jQuery.parseJSON(data.item);
 		alert(obj.fullName);
 		}); 
 		});

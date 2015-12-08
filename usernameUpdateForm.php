@@ -38,31 +38,20 @@ if(isset($_POST['submit'])){
   <h2 class='text-capitalize'>username Update Form</h2>
  <div class='form-group'>
 
-    <label class='control-label col-sm-2 col-md-3' for='usernameid'></label>
-
-    <div class='col-sm-10 col-md-5'>
-
+ 
       <input type='hidden' class='form-control' id='usernameid' placeholder='usernameid' value='<?php echo $individualDetails[0]['usernameid'] ?>'>
 
-    </div>
 
-  </div>
 
-       <div class='form-group'>
-
-    <label class='control-label col-sm-2 col-md-3' for='id'></label>
-
-    <div class='col-sm-10 col-md-5'>
+ 
 
       <input type='hidden' class='form-control' id='id' placeholder='id' value='<?php echo $individualDetails[0]['id'] ?>'>
 
-    </div>
-
-  </div>  
+ 
 
           <div class='form-group'>
 
-    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='fullName'>fullName:</label>
+    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='fullName' required >fullName:</label>
 
     <div class='col-sm-10 col-md-5'>
 
@@ -105,37 +94,21 @@ if(isset($_POST['submit'])){
 
     <div class='col-sm-10 col-md-5'>
 
-      <input type='text' class='form-control' id='password' placeholder='password' value='<?php echo $individualDetails[0]['password'] ?>'>
+      <input type='password' class='form-control' id='password' placeholder='password' value='<?php echo $individualDetails[0]['password'] ?>'>
 
     </div>
 
   </div>
 
   
-    <div class='form-group'>
 
-    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='currentTime'>currentTime:</label>
-
-    <div class='col-sm-10 col-md-5'>
-
-      <input type='text' class='form-control' id='currentTime' placeholder='currentTime' value='<?php echo $individualDetails[0]['currentTime'] ?>'>
-
-    </div>
-
-  </div>
+      <input type='hidden' class='form-control' id='currentTime' placeholder='currentTime' value='<?php echo $individualDetails[0]['currentTime'] ?>'>
 
   
-    <div class='form-group'>
 
-    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='profilePicture'>profilePicture:</label>
 
-    <div class='col-sm-10 col-md-5'>
+      <input type='hidden' class='form-control' id='profilePicture' placeholder='profilePicture' value='<?php echo $individualDetails[0]['profilePicture'] ?>'>
 
-      <input type='text' class='form-control' id='profilePicture' placeholder='profilePicture' value='<?php echo $individualDetails[0]['profilePicture'] ?>'>
-
-    </div>
-
-  </div>
 
   
     <div class='form-group'>
@@ -209,50 +182,31 @@ if(isset($_POST['submit'])){
 
     <div class='col-sm-10 col-md-5'>
 
-      <input type='text' class='form-control' id='insearchofjob' placeholder='insearchofjob' value='<?php echo $individualDetails[0]['insearchofjob'] ?>'>
+      <input type='radio' name="insearchofjob" id='insearchofjob' placeholder='insearchofjob'<?php if($individualDetails[0]['insearchofjob'] == '1'){echo "checked";} ?> value='1'>Yes
+      <input type='radio' name="insearchofjob" id='insearchofjob' placeholder='insearchofjob' <?php if($individualDetails[0]['insearchofjob'] == '0'){echo "checked";} ?> value='0'>No
 
     </div>
 
   </div>
 
   
-    <div class='form-group'>
 
-    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='experianceid'>experianceid:</label>
 
-    <div class='col-sm-10 col-md-5'>
 
-      <input type='text' class='form-control' id='experianceid' placeholder='experianceid' value='<?php echo $individualDetails[0]['experianceid'] ?>'>
+      <input type='hidden' class='form-control' id='experianceid' placeholder='experianceid' value='<?php echo $individualDetails[0]['experianceid'] ?>'>
 
-    </div>
 
-  </div>
 
   
-    <div class='form-group'>
 
-    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='galleryid'>galleryid:</label>
+      <input type='hidden' class='form-control' id='galleryid' placeholder='galleryid' value='<?php echo $individualDetails[0]['galleryid'] ?>'>
 
-    <div class='col-sm-10 col-md-5'>
 
-      <input type='text' class='form-control' id='galleryid' placeholder='galleryid' value='<?php echo $individualDetails[0]['galleryid'] ?>'>
 
-    </div>
 
-  </div>
+      <input type='hidden' class='form-control' id='skillid' placeholder='skillid' value='<?php echo $individualDetails[0]['skillid'] ?>'>
 
-  
-    <div class='form-group'>
 
-    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='skillid'>skillid:</label>
-
-    <div class='col-sm-10 col-md-5'>
-
-      <input type='text' class='form-control' id='skillid' placeholder='skillid' value='<?php echo $individualDetails[0]['skillid'] ?>'>
-
-    </div>
-
-  </div>
 
   
   
@@ -290,7 +244,8 @@ city=$('#city').val();
 phoneNumber=$('#phoneNumber').val();
 personalWebsite=$('#personalWebsite').val();
 languages=$('#languages').val();
-insearchofjob=$('#insearchofjob').val();
+insearchofjob=$('#insearchofjob:checked').val();
+alert(insearchofjob);
 experianceid=$('#experianceid').val();
 galleryid=$('#galleryid').val();
 skillid=$('#skillid').val();
@@ -318,7 +273,7 @@ submit:'submit',
 		 
 	}
 	,function(data,status){
-			alert('succsessfully Updated');
+			alert('succsessfully Updated'+data);
 		
 		});  }); });
 

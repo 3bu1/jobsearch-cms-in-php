@@ -12,36 +12,22 @@ if(isset($_POST['submit'])){
 
 		$valuearry = array(htmlspecialchars($_POST['usernameid']),htmlspecialchars($_POST['id']),htmlspecialchars($_POST['fullName']),htmlspecialchars($_POST['email']),htmlspecialchars($_POST['dob']),htmlspecialchars($_POST['password']),htmlspecialchars($_POST['currentTime']),htmlspecialchars($_POST['profilePicture']),htmlspecialchars($_POST['fullAddress']),htmlspecialchars($_POST['city']),htmlspecialchars($_POST['phoneNumber']),htmlspecialchars($_POST['personalWebsite']),htmlspecialchars($_POST['languages']),htmlspecialchars($_POST['insearchofjob']),htmlspecialchars($_POST['experianceid']),htmlspecialchars($_POST['galleryid']),htmlspecialchars($_POST['skillid']));
 
-		Insertrow("username",$valuearry);}?></head>
+		Insertrow("username",$valuearry);}?>
+		
+		</head>
 <body>
 
 		<form action="usernameInsertForm.php" method="post" class='form-horizontal'>
 
 <div class='container'>
   <h2 class='text-capitalize'>username Form</h2>
- <div class='form-group'>
 
-    <label class='control-label col-sm-2 col-md-3' for='usernameid'></label>
-
-    <div class='col-sm-10 col-md-5'>
 
       <input type='hidden' class='form-control' id='usernameid' placeholder='usernameid' >
 
-    </div>
-
-  </div>
-
-       <div class='form-group'>
-
-    <label class='control-label col-sm-2 col-md-3' for='id'></label>
-
-    <div class='col-sm-10 col-md-5'>
-
       <input type='hidden' class='form-control' id='id' placeholder='id'>
 
-    </div>
 
-  </div>  
 
           <div class='form-group'>
 
@@ -49,7 +35,7 @@ if(isset($_POST['submit'])){
 
     <div class='col-sm-10 col-md-5'>
 
-      <input type='text' class='form-control' id='fullName' placeholder='fullName'>
+      <input type='text' class='form-control' id='fullName'  placeholder='fullName' required />
 
     </div>
 
@@ -62,7 +48,7 @@ if(isset($_POST['submit'])){
 
     <div class='col-sm-10 col-md-5'>
 
-      <input type='text' class='form-control' id='email' placeholder='email'>
+      <input type='text' class='form-control' id='email' placeholder='email' required />
 
     </div>
 
@@ -71,11 +57,11 @@ if(isset($_POST['submit'])){
   
     <div class='form-group'>
 
-    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='dob'>dob:</label>
+    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='dob' >dob:</label>
 
     <div class='col-sm-10 col-md-5'>
 
-      <input type='text' class='form-control' id='dob' placeholder='dob'>
+      <input type='date' class='form-control' id='dob' placeholder='dob' required>
 
     </div>
 
@@ -84,41 +70,27 @@ if(isset($_POST['submit'])){
   
     <div class='form-group'>
 
-    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='password'>password:</label>
+    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='password' >password:</label>
 
     <div class='col-sm-10 col-md-5'>
 
-      <input type='text' class='form-control' id='password' placeholder='password'>
+      <input type='password' class='form-control' id='password' placeholder='password' required>
 
     </div>
 
   </div>
 
   
-    <div class='form-group'>
+ 
 
-    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='currentTime'>currentTime:</label>
+      <input type='hidden' class='form-control' id='currentTime' placeholder='currentTime'>
 
-    <div class='col-sm-10 col-md-5'>
 
-      <input type='text' class='form-control' id='currentTime' placeholder='currentTime'>
 
-    </div>
 
-  </div>
+      <input type='hidden' class='form-control' id='profilePicture' placeholder='profilePicture'>
 
-  
-    <div class='form-group'>
 
-    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='profilePicture'>profilePicture:</label>
-
-    <div class='col-sm-10 col-md-5'>
-
-      <input type='text' class='form-control' id='profilePicture' placeholder='profilePicture'>
-
-    </div>
-
-  </div>
 
   
     <div class='form-group'>
@@ -127,7 +99,7 @@ if(isset($_POST['submit'])){
 
     <div class='col-sm-10 col-md-5'>
 
-      <input type='text' class='form-control' id='fullAddress' placeholder='fullAddress'>
+      <input type='text' class='form-control' id='fullAddress' placeholder='fullAddress' >
 
     </div>
 
@@ -140,7 +112,7 @@ if(isset($_POST['submit'])){
 
     <div class='col-sm-10 col-md-5'>
 
-      <input type='text' class='form-control' id='city' placeholder='city'>
+      <input type='text' class='form-control' id='city' placeholder='city' required>
 
     </div>
 
@@ -153,7 +125,7 @@ if(isset($_POST['submit'])){
 
     <div class='col-sm-10 col-md-5'>
 
-      <input type='text' class='form-control' id='phoneNumber' placeholder='phoneNumber'>
+      <input type='text' class='form-control' id='phoneNumber' placeholder='phoneNumber' required>
 
     </div>
 
@@ -192,50 +164,30 @@ if(isset($_POST['submit'])){
 
     <div class='col-sm-10 col-md-5'>
 
-      <input type='text' class='form-control' id='insearchofjob' placeholder='insearchofjob'>
+      <input type='radio' class='' id='insearchofjob' name="insearchofjob" value='1' >Yes
+	  <input type='radio' class='' id='insearchofjob' name="insearchofjob" value='0'>No
 
     </div>
 
   </div>
+
+
+
+      <input type='hidden' class='form-control' id='experianceid' placeholder='experianceid'>
+
+
 
   
-    <div class='form-group'>
 
-    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='experianceid'>experianceid:</label>
 
-    <div class='col-sm-10 col-md-5'>
+      <input type='hidden' class='form-control' id='galleryid' placeholder='galleryid'>
 
-      <input type='text' class='form-control' id='experianceid' placeholder='experianceid'>
 
-    </div>
 
-  </div>
 
-  
-    <div class='form-group'>
+      <input type='hidden' class='form-control' id='skillid' placeholder='skillid'>
 
-    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='galleryid'>galleryid:</label>
 
-    <div class='col-sm-10 col-md-5'>
-
-      <input type='text' class='form-control' id='galleryid' placeholder='galleryid'>
-
-    </div>
-
-  </div>
-
-  
-    <div class='form-group'>
-
-    <label class='control-label col-sm-2 col-md-3 text-capitalize' for='skillid'>skillid:</label>
-
-    <div class='col-sm-10 col-md-5'>
-
-      <input type='text' class='form-control' id='skillid' placeholder='skillid'>
-
-    </div>
-
-  </div>
 
   
   
