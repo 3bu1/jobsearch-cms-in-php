@@ -384,3 +384,8 @@ div p {
 .regml{
 	margin-left: -20px;
 }
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
