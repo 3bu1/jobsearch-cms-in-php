@@ -2,6 +2,12 @@
 	background-color: rgba(35, 48, 63, 0.5)
 }
 
+body {
+	  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  }
+
+
+
 /* .navbar-nav > li >a{
 	color: #fff;
 } */
@@ -388,4 +394,18 @@ div p {
     height: auto;
     max-height: 200px;
     overflow-x: hidden;
+}
+.sideField {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.bodyFont {
+    font-size: 13px;
+}
+.userForm{
+	font-size: 20px;
+padding: 15px;
+margin-left: 25px;
+color: rgb(6, 77, 149);
 }
