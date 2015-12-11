@@ -73,4 +73,8 @@ width:inherit;
  .space{
  font-size: 11px;
  }
+ .userM{
+	 margin-left: 5px !important;
+	 margin-right: 5px !important;
+ }
 }
