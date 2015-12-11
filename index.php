@@ -1,98 +1,26 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <title>25thCraft</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <script src="js/jquery-1.11.1.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script>
-function msieversion() {
-            var ua = window.navigator.userAgent;
-            var msie = ua.indexOf("MSIE ");
-
-            if (parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))) > 0)      // If Internet Explorer, return version number
-                //alert("Best Viewd in Google chrome and IE 8+");
-            
-            return parseInt(ua.substring(msie + 5, ua.indexOf(".", msie)));
-        }
-
-if ( msieversion() <= 9 )
-	alert("Please open in Chrome, Firefox or Internet Explorer 9 and above to access complete functionality")
-     // document.write ( "This is Internet Explorer "+msieversion() );
-</script>
-<?php 
-if(isset($_POST['blabkey'])=='blabla'){
-	//echo isset($_POST['registerEmail'])."####";
-include_once('database/Insert.php');
-		include_once('database/Select.php');
-$getAlpha = new Select;
-		$companydetails = array();
-		$companydetails = $getAlpha->selectWhere("username", "email", $_POST['registerEmail']);
-		//print_r($companydetails);
-		echo json_encode($companydetails);
-		//$companydetails = json_encode(array('item' => $companydetails));
-		//echo $companydetails;
-}
-?>
-
-<link rel="stylesheet" id="apt-style-css" href="css/style.css" type="text/css" media="all">
   
+<?php
+
+session_start();
+session_unset();
+session_destroy();
+ include 'externallink.php'; ?>
 </head>
 <body>
 
 <div class="container-fluid noMargin noPadding">
   <div class="row content noMargin">
   
-   <div class="page-container headerBackground ">
-    <div class="container-fluid">
-      <div class="page-bg ">
-        <div class="col-sm-4"><h2 ><a class="standardBlue" href="#">25thCraft.com</a></h2></div>
-         <div class="col-sm-8 text-right"><h2 ><form class="form-inline PB10" role="search">
-        <div class="col-xs-8 col-sm-11 noPadding">
-          <input type="text" class="form-control" placeholder="Skill/City/Rental Instruments">
-        </div>
-        <div class="col-xs-4 col-sm-1 noPadding"><button type="submit" class="btn btn-default">Submit</button></div>
-      </form></h2></div>
-      </div>
-    </div>
-  </div>
-   
-  
-  
-    
-
-
-<nav class="navbar navbar-inverse noBorderRadius noBorder noMargin">
-  <div class="container-fluid">
-    <h2 class="noBorder noMargin"><div class="navbar-header pull-left">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-     
-    </div></h2>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-       <li class="active"> <a data-toggle="pill" href="#home">FILM JOBS</a></li>
-        <li><a data-toggle="pill" href="#NEWS">NEWS</a></li>
-        <!--<li><a data-toggle="pill" href="#PHOTOGRAPHY">PHOTOGRAPHY</a></li>-->
-        <!--<li><a data-toggle="pill" href="#INSTRUMENTS">RENT A CAMERA</a></li>-->
-        <li><a data-toggle="pill" href="#WHYUS">WHY US</a></li>
-        <li><a data-toggle="pill" href="#CONTACT">CONTACT US</a></li>
-     
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" id="myBtn"><span class="glyphicon glyphicon-user"></span> Login</a></li>
-        <li><a href="#" class="myBtnreg"><span class="glyphicon glyphicon-log-in"></span> Register</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
+<?php include 'header.php'; ?>
 <div class="noPadding noMargin contentPanel tab-content" id="mainPanel">
 
 
@@ -181,7 +109,7 @@ DEPARTMENT <span class="badge">(123+)</span>  </a></li>
       <p class="contR col-sm-5 noPadding">WHO WE ARE</p>
      
      <div class="MT20">
-<p>     25thcraft is a global community — and so is our staff. We're headquartered in <strong>HYDERABAD</strong> and <strong>BANGALORE</strong>, but the collaborative and global nature of our work means we have staffers, advisors and volunteers worldwide.</p>
+<p>     25thcraft is a global community and so is our staff. We're headquartered in <strong>HYDERABAD</strong> and <strong>BANGALORE</strong>, but the collaborative and global nature of our work means we have staffers, advisors and volunteers worldwide.</p>
 <div class="MT20">
      <h4><a href="">Our organization</a></h4>
      <p>Our mission, history, team, and more</p>
@@ -266,9 +194,11 @@ DEPARTMENT <span class="badge">(123+)</span>  </a></li>
       </div>
     </div>
     </div>
+<?php include("footer.php"); ?>
   </div>
+  
   </div>
-</div>
+
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog " >
     
@@ -279,7 +209,7 @@ DEPARTMENT <span class="badge">(123+)</span>  </a></li>
           <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
         </div>
         <div class="modal-body col-sm-7" style="padding:10px 20px;">
-          <form role="form" class="form-inline">
+          <form role="form" class="form-inline" id="loginformsubmit">
             <div class="form-group MT20">
               <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
               <input type="text" class="form-control" id="usrname" placeholder="Enter email">
@@ -355,9 +285,10 @@ DEPARTMENT <span class="badge">(123+)</span>  </a></li>
 
     <div class='input-group'>
 
-      <input type='email' class='form-control' id='registerEmail' placeholder='email' required >
+      <input type='email' class='form-control' id='registerEmail' name="registerEmail" placeholder='email' required >
 <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
     </div>
+	<p id="alreadyRegistered" style="color:#F00"></p>
 </div>
   </div>
 
@@ -413,155 +344,65 @@ DEPARTMENT <span class="badge">(123+)</span>  </a></li>
       </div>
 
     </div>
-    <div class='form-group'>
+    
 
-    <label class='control-label col-sm-2 col-md-3' for='usernameid'></label>
-
-    <div class='col-sm-10 col-md-5'>
 
       <input type='hidden' class='form-control' id='usernameid' placeholder='usernameid' >
 
-    </div>
 
-  </div>
 
-       <div class='form-group'>
-
-    <label class='control-label col-sm-2 col-md-3' for='id'></label>
-
-    <div class='col-sm-10 col-md-5'>
 
       <input type='hidden' class='form-control' id='id' placeholder='id'>
 
-    </div>
-
-  </div>  
- <div class='form-group'>
 
 
-
-    <div class='col-sm-10 col-md-5'>
 
       <input type='hidden' class='form-control' id='dob' placeholder='dob'>
 
-    </div>
 
-  </div>
   
-    <div class='form-group'>
 
-
-
-    <div class='col-sm-10 col-md-5'>
 
       <input type='hidden' class='form-control' id='currentTime' placeholder='currentTime' >
 
-    </div>
 
-  </div>
 
   
-    <div class='form-group'>
-
-  
-
-    <div class='col-sm-10 col-md-5'>
 
       <input type='hidden' class='form-control' id='profilePicture' placeholder='profilePicture'>
 
-    </div>
 
-  </div>
-
-  
-    <div class='form-group'>
-
-
-
-    <div class='col-sm-10 col-md-5'>
+ 
 
       <input type='hidden' class='form-control' id='fullAddress' placeholder='fullAddress'>
 
-    </div>
 
-  </div>
-  
-    <div class='form-group'>
-
-
-
-    <div class='col-sm-10 col-md-5'>
 
       <input type='hidden' class='form-control' id='personalWebsite' placeholder='personalWebsite' >
 
-    </div>
 
-  </div>
-
-  
-    <div class='form-group'>
-
-
-
-    <div class='col-sm-10 col-md-5'>
 
       <input type='hidden' class='form-control' id='languages' placeholder='languages'>
 
-    </div>
-
-  </div>
-
-  
-    <div class='form-group'>
 
 
 
-    <div class='col-sm-10 col-md-5'>
 
       <input type='hidden' class='form-control' id='insearchofjob' placeholder='insearchofjob'>
 
-    </div>
 
-  </div>
-
-  
-    <div class='form-group'>
-
-
-
-    <div class='col-sm-10 col-md-5'>
 
       <input type='hidden' class='form-control' id='experianceid' placeholder='experianceid'>
 
-    </div>
-
-  </div>
-
-  
-    <div class='form-group'>
 
 
 
-    <div class='col-sm-10 col-md-5'>
 
       <input type='hidden' class='form-control' id='galleryid' placeholder='galleryid'>
 
-    </div>
-
-  </div>
-
-  
-    <div class='form-group'>
-
-
-
-    <div class='col-sm-10 col-md-5'>
 
       <input type='hidden' class='form-control' id='skillid' placeholder='skillid'>
 
-    </div>
-
-  </div>
 
   
   
@@ -573,7 +414,20 @@ DEPARTMENT <span class="badge">(123+)</span>  </a></li>
 
                 </form>
 
-	<script>
+	
+            
+                
+              </div><!---modal-body--->
+          </div>
+       </div>
+
+  </div>
+
+
+  
+</div>
+</body>
+<script>
 $(document).ready(function(){
 $('#userformsubmit').submit(function(event){
 	
@@ -624,45 +478,61 @@ submit:'submit',
 		
 		});  }); 
 		
-		$("#registerEmail").change(function(){
+		
+		$('#loginformsubmit').submit(function(event){
+	
+	  
+	  usermail=$('#usrname').val();
+psw=$('#psw').val();
+
+
+	  // alert(address);
+	 $.post('loginServerValidation.php',
+	{
+		 usrname : usermail,
+psw : psw,
+blabkey1:'blabla1',
+		 
+	}
+	,function(data,status){
+		alert('succsessfully Inserted' + data);
+		
+		});  }); 
+		
+
+		});
+$(window).load(function(){
+	$('#registerEmail').val("");
+			$("#registerEmail").change(function(){
 			
 			registerEmail = $('#registerEmail').val();
-			alert(registerEmail);
-			$.post('index.php',
+			//alert(registerEmail);
+			$.post('loginServerValidation.php',
 	{
 		 blabkey : 'blabla',
 registerEmail : registerEmail,
 
 }
 	,function(data,status){
-		alert(data.item);
-		var obj = jQuery.parseJSON(data.item);
-		alert(obj.fullName);
+		//alert(data);
+		//$("#alreadyRegistered").html(data+", you have already registered with us.<a href='#'>Forgotpassword</a>?");
+		
+		var obj = jQuery.parseJSON(data);
+		
+		if(obj.length > 0){
+				$("#alreadyRegistered").html(obj[0]['fullName']+", you have already registered with us.<a href='#'> Forgot Password?</a>").show();
+	
+			$("#usernamesubmit").hide();
+		}else{
+		//	alert("hi");
+			$("#alreadyRegistered").html("Email id available").show();
+	
+			$("#usernamesubmit").show();
+		}
 		}); 
 		});
-		
-		});
+	
 
-  </script>
-            
-                
-              </div><!---modal-body--->
-          </div>
-       </div>
-
-  </div>
-<div id="footer" class="container ">
-    <nav class="navbar navbar-default navbar-fixed-bottom navBarLineHeight ">
-        <div class="navbar-inner navbar-content-center">
-          <p class="col-md-6  noMargin  text-left" >20<?php echo date("y"); ?> &copy; 25thcraft.com</p>
-  <p class="col-md-6 text-right noMargin " >Powered By: <a href="thejointservices.com" style="color:#FFF">TheJointServices.com</a></p>
-
-        </div>
-    </nav>
-</div>
-</body>
-<script>
-$(document).ready(function(){
     $("#myBtn").click(function(){
         $("#myModal").modal();
     });

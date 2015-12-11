@@ -8,7 +8,7 @@
 .noBorder{border:inherit !important;}
 .standardBlue{color:#337ab7;}
 .standardBlueBackground{background:#337ab7;color:#FFF;}
-.standardBlueBackground:hover{background:#eceff4;color:#337ab7;}
+.standardBlueBackground:hover{background:#FFF;color:#337ab7;}
 .vcenter {
     
     vertical-align: middle;
@@ -16,7 +16,7 @@
 .noPadding{padding:inherit !important;}
 .noMargin{margin:inherit !important;}
 .height100{height:100%;}
-.contentPanel{height:486px !important;overflow:hidden;width:100%;}
+.contentPanel{overflow:hidden;width:100%;}
 .contentPanel img{width:100%;
 height:auto;}
 .noBackground{background:inherit !important;}
@@ -26,11 +26,11 @@ footer {
       padding: 5px;
     }
 	.sidenav {
-      background-color: #eceff4;
+      background-color: #FFF;
    
     }
 	
-	.headerBackground{  background-color: #eceff4;}
+	.headerBackground{  background-color: #FFF;}
 	.contR {
   text-transform: uppercase;
   margin-top: 15px;
